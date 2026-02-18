@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react";
 import { Star } from "lucide-react";
 
 const testimonials = [
@@ -32,7 +33,17 @@ function Stars({ rating }: { rating: number }) {
   );
 }
 
+function formatCompact(n: number) {
+  return new Intl.NumberFormat("id-ID", { notation: "compact" }).format(n);
+}
+
 const Testimonials = () => {
+  const [openName, setOpenName] = useState<string | null>(null);
+  const openTestimonial = useMemo(
+    () => testimonials.find((t) => t.name === openName) ?? null,
+    [openName]
+  );
+
   return (
     <section id="testimoni" className="py-24 bg-coffee-dark">
       <div className="container mx-auto px-4">
@@ -51,7 +62,12 @@ const Testimonials = () => {
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center justify-center gap-2 mb-8">
             <Stars rating={5} />
-            <span className="text-cream/80 text-sm">5.0 (berdasarkan 3 ulasan)</span>
+            <span className="inline-flex items-center rounded-full border border-gold/25 bg-coffee-medium/30 px-2.5 py-1 text-xs font-semibold text-cream">
+              5.0
+            </span>
+            <span className="text-cream/60 text-xs">
+              berdasarkan {formatCompact(testimonials.length)} ulasan
+            </span>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -61,13 +77,55 @@ const Testimonials = () => {
                 className="rounded-xl border border-cream/10 bg-coffee-medium/30 backdrop-blur-sm p-6"
               >
                 <Stars rating={t.rating} />
-                <blockquote className="text-cream/80 mt-4 leading-relaxed">“{t.quote}”</blockquote>
+                <blockquote className="text-cream/80 mt-4 leading-relaxed">
+                  <span className="block line-clamp-4">“{t.quote}”</span>
+                </blockquote>
+                {t.quote.length > 140 && (
+                  <button
+                    type="button"
+                    onClick={() => setOpenName(t.name)}
+                    className="mt-3 text-gold/90 hover:text-gold text-xs font-semibold tracking-wide uppercase"
+                  >
+                    Baca selengkapnya
+                  </button>
+                )}
                 <figcaption className="text-cream mt-4 font-semibold">{t.name}</figcaption>
               </figure>
             ))}
           </div>
         </div>
       </div>
+
+      {openTestimonial && (
+        <div
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 px-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Testimoni ${openTestimonial.name}`}
+          onClick={() => setOpenName(null)}
+        >
+          <div
+            className="w-full max-w-xl rounded-2xl border border-cream/10 bg-coffee-dark p-6 shadow-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <Stars rating={openTestimonial.rating} />
+                <div className="mt-2 text-cream font-semibold">{openTestimonial.name}</div>
+              </div>
+              <button
+                type="button"
+                className="text-cream/70 hover:text-cream text-sm"
+                onClick={() => setOpenName(null)}
+                aria-label="Tutup"
+              >
+                Tutup
+              </button>
+            </div>
+            <div className="mt-4 text-cream/80 leading-relaxed">“{openTestimonial.quote}”</div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Coffee, Menu, X } from "lucide-react";
+import { Coffee, Menu, X, MessageCircle } from "lucide-react";
 
 const navLinks = [
   { label: "Beranda", href: "#beranda" },
@@ -48,6 +48,18 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
+        <a
+          href="https://wa.me/628xxxxxxxxxx?text=Halo%20Kopiku%20Pas!%20Saya%20mau%20tanya%20lokasi%20di%20Sukoharjo%20(Solo%20Raya)%20dan%20jam%20buka."
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Chat WhatsApp"
+          className={`ml-4 hidden md:inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white shadow-sm transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/40 ${
+            mobileOpen ? "pointer-events-none opacity-0" : "opacity-100"
+          }`}
+        >
+          <MessageCircle className="h-5 w-5" />
+        </a>
 
         {/* Mobile toggle */}
         <button

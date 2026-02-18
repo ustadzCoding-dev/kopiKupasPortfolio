@@ -38,26 +38,18 @@ const Hero = () => {
           dengan cinta dan kehangatan.
         </p>
         <div
-          className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-up"
+          className="flex flex-col sm:flex-row gap-2.5 sm:gap-4 justify-center opacity-0 animate-fade-up w-full max-w-xs sm:max-w-none mx-auto"
           style={{ animationDelay: "0.8s" }}
         >
           <a
-            href="https://wa.me/628xxxxxxxxxx?text=Halo%20Kopiku%20Pas!%20Saya%20mau%20tanya%20lokasi%20dan%20jam%20buka."
-            target="_blank"
-            rel="noreferrer"
-            className="inline-block bg-gold text-accent-foreground font-semibold px-8 py-3 rounded-md hover:bg-gold/90 transition-all duration-300 tracking-wide uppercase text-sm"
-          >
-            Chat WhatsApp
-          </a>
-          <a
             href="#menu"
-            className="inline-block bg-gold text-accent-foreground font-semibold px-8 py-3 rounded-md hover:bg-gold/90 transition-all duration-300 tracking-wide uppercase text-sm"
+            className="inline-flex w-full sm:w-auto items-center justify-center bg-gold text-accent-foreground font-semibold px-4 sm:px-8 py-2 sm:py-3 min-h-10 sm:min-h-12 rounded-md hover:bg-gold/90 transition-all duration-300 tracking-wide uppercase text-[12px] sm:text-sm text-center"
           >
             Lihat Menu
           </a>
           <a
             href="#kontak"
-            className="inline-block border border-cream/40 text-cream font-semibold px-8 py-3 rounded-md hover:bg-cream/10 transition-all duration-300 tracking-wide uppercase text-sm"
+            className="inline-flex w-full sm:w-auto items-center justify-center border border-cream/40 text-cream font-semibold px-4 sm:px-8 py-2 sm:py-3 min-h-10 sm:min-h-12 rounded-md hover:bg-cream/10 transition-all duration-300 tracking-wide uppercase text-[12px] sm:text-sm text-center"
           >
             Kunjungi Kami
           </a>
