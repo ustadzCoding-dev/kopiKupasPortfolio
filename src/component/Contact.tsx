@@ -59,7 +59,7 @@ const Contact = () => {
                 <Mail className="h-5 w-5" />
               </a>
               <a
-                href="https://wa.me/628xxxxxxxxxx?text=Halo%20Kopiku%20Pas!%20Saya%20mau%20tanya%20lokasi%20dan%20jam%20buka."
+                href="https://wa.me/628xxxxxxxxxx?text=Halo%20Kopiku%20Pas!%20Saya%20mau%20tanya%20lokasi%20di%20Sukoharjo%20(Solo%20Raya)%20dan%20jam%20buka."
                 target="_blank"
                 rel="noreferrer"
                 className="text-cream/60 hover:text-gold transition-colors"

@@ -15,19 +15,22 @@
     <meta property="og:description" content="Kedai kopi di Sukoharjo (Solo Raya) dengan kopi lokal pilihan dan pastry. Suasana hangat untuk nongkrong atau WFC." />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="id_ID" />
-    <meta property="og:image" content="/placeholder.svg" />
+    <meta property="og:url" content="https://kopi-kupas.netlify.app/" />
+    <meta property="og:image" content="/og-image.jpg" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Kopiku Pas — Kedai Kopi di Sukoharjo (Solo Raya)" />
     <meta name="twitter:description" content="Kopi lokal pilihan dan pastry. Suasana hangat untuk nongkrong atau WFC." />
-    <meta name="twitter:image" content="/placeholder.svg" />
+    <meta name="twitter:image" content="/og-image.jpg" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "CafeOrCoffeeShop",
         "name": "Kopiku Pas",
+        "url": "https://kopi-kupas.netlify.app/",
         "description": "Kedai kopi di Sukoharjo (Solo Raya) yang menyajikan kopi lokal pilihan dan pastry.",
+        "telephone": "+62 8xx xxxx xxxx",
         "servesCuisine": ["Coffee", "Pastry"],
         "address": {
           "@type": "PostalAddress",
@@ -35,7 +38,21 @@
           "addressRegion": "Jawa Tengah",
           "addressCountry": "ID"
         },
-        "areaServed": "Solo Raya"
+        "areaServed": "Solo Raya",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "07:00",
+            "closes": "22:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday", "Sunday"],
+            "opens": "08:00",
+            "closes": "23:00"
+          }
+        ]
       }
     </script>
   </head>
