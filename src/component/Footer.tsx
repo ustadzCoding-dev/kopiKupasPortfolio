@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2 text-cream">
             <Coffee className="h-5 w-5 text-gold" />
-            <span className="font-heading text-lg font-bold">Kopi Kupas</span>
+            <span className="font-heading text-lg font-bold">Kopiku Pas</span>
           </div>
           <nav className="flex gap-6">
             {["Beranda", "Tentang", "Menu", "Galeri", "Kontak"].map((l) => (
@@ -21,7 +21,7 @@ const Footer = () => {
             ))}
           </nav>
           <p className="text-cream/40 text-sm">
-            © 2026 Kedai Kopi Kupas. All rights reserved.
+            © 2026 Kopiku Pas. All rights reserved.
           </p>
         </div>
       </div>

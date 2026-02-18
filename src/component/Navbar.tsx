@@ -31,7 +31,7 @@ const Navbar = () => {
         <a href="#beranda" className="flex items-center gap-2 text-cream">
           <Coffee className="h-7 w-7 text-gold" />
           <span className="font-heading text-xl font-bold tracking-wide">
-            Kopi Kupas
+            Kopiku Pas
           </span>
         </a>
 

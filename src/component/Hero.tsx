@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Kedai Kopi Kupas interior"
+          alt="Kopiku Pas interior"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-coffee-dark/60" />
@@ -28,7 +28,7 @@ const Hero = () => {
           className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-cream mb-6 opacity-0 animate-fade-up"
           style={{ animationDelay: "0.4s" }}
         >
-          Kedai Kopi Kupas
+          Kopiku <span className="hero-pas" data-text="Pas">Pas</span>
         </h1>
         <p
           className="text-cream/80 text-lg md:text-xl font-light max-w-xl mx-auto mb-10 opacity-0 animate-fade-up"
@@ -41,6 +41,14 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-up"
           style={{ animationDelay: "0.8s" }}
         >
+          <a
+            href="https://wa.me/628xxxxxxxxxx?text=Halo%20Kopiku%20Pas!%20Saya%20mau%20tanya%20lokasi%20dan%20jam%20buka."
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block bg-gold text-accent-foreground font-semibold px-8 py-3 rounded-md hover:bg-gold/90 transition-all duration-300 tracking-wide uppercase text-sm"
+          >
+            Chat WhatsApp
+          </a>
           <a
             href="#menu"
             className="inline-block bg-gold text-accent-foreground font-semibold px-8 py-3 rounded-md hover:bg-gold/90 transition-all duration-300 tracking-wide uppercase text-sm"

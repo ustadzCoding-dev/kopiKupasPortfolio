@@ -1,4 +1,4 @@
-import { MapPin, Clock, Phone, Instagram, Mail } from "lucide-react";
+import { MapPin, Clock, Phone, Instagram, Mail, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -21,9 +21,17 @@ const Contact = () => {
               <div>
                 <h3 className="font-heading text-lg font-semibold text-cream mb-1">Alamat</h3>
                 <p className="text-cream/70 leading-relaxed">
-                  Jl. Kopi Nusantara No. 12<br />
-                  Kota Bandung, Jawa Barat 40115
+                  Sukoharjo, Solo Raya<br />
+                  Jawa Tengah
                 </p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Kopiku%20Pas%2C%20Sukoharjo%2C%20Solo%20Raya"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-block mt-3 text-sm text-gold hover:text-gold/90 transition-colors"
+                >
+                  Buka di Google Maps
+                </a>
               </div>
             </div>
             <div className="flex gap-4">
@@ -40,7 +48,7 @@ const Contact = () => {
               <Phone className="h-6 w-6 text-gold flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-heading text-lg font-semibold text-cream mb-1">Telepon</h3>
-                <p className="text-cream/70">+62 812 3456 7890</p>
+                <p className="text-cream/70">+62 8xx xxxx xxxx</p>
               </div>
             </div>
             <div className="flex gap-4 pt-2">
@@ -50,14 +58,23 @@ const Contact = () => {
               <a href="mailto:hello@kopikupas.id" className="text-cream/60 hover:text-gold transition-colors" aria-label="Email">
                 <Mail className="h-5 w-5" />
               </a>
+              <a
+                href="https://wa.me/628xxxxxxxxxx?text=Halo%20Kopiku%20Pas!%20Saya%20mau%20tanya%20lokasi%20dan%20jam%20buka."
+                target="_blank"
+                rel="noreferrer"
+                className="text-cream/60 hover:text-gold transition-colors"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle className="h-5 w-5" />
+              </a>
             </div>
           </div>
 
           {/* Map placeholder */}
           <div className="rounded-lg overflow-hidden border border-cream/10 h-[350px]">
             <iframe
-              title="Lokasi Kedai Kopi Kupas"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.56369587288!2d107.57311839726562!3d-6.903429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Bandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
+              title="Lokasi Kopiku Pas"
+              src="https://www.google.com/maps?q=Sukoharjo%2C%20Jawa%20Tengah&output=embed"
               className="w-full h-full"
               style={{ border: 0 }}
               allowFullScreen
